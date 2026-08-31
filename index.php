@@ -48,7 +48,7 @@
                 </div>
 
                 <div class="selectBox">
-                    <select name="municipios" id="municipios">
+                    <select name="municipio" id="municipio">
                         <option value="saoLuis">São Luís</option>
                         <option value="raposa">Raposa</option>
                         <option value="lumiar">Paço do Lumiar</option>
