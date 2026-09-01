@@ -12,7 +12,7 @@
 <body>
 
     <div class="box">
-        <form action="index.php" method="post" id="form">
+        <form action="validacao.php" method="post" id="form">
             <fieldset>
 
                 <legend><b>Formulário de inscrições</b></legend>
@@ -66,6 +66,8 @@
                         required />
                     <label for="telefone" class="labelInput">Telefone</label>
                 </div>
+
+                <input type="submit" name="enviar" id="enviar" value="Enviar"/>
 
             </fieldset>
         </form>
