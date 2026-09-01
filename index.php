@@ -23,7 +23,7 @@
                         name="nome"
                         id="nome"
                         class="inputuser"
-                        required />
+                         />
                     <label for="nome" class="labelInput">Nome</label>
                 </div>
 
@@ -33,7 +33,7 @@
                         name="cpf"
                         id="cpf"
                         class="inputuser"
-                        required />
+                         />
                     <label for="cpf" class="labelInput">CPF</label>
                 </div>
 
@@ -43,7 +43,7 @@
                         name="email"
                         id="email"
                         class="inputuser"
-                        required />
+                         />
                     <label for="email" class="labelInput">Email</label>
                 </div>
 
@@ -63,7 +63,7 @@
                         name="telefone"
                         id="telefone"
                         class="inputuser"
-                        required />
+                         />
                     <label for="telefone" class="labelInput">Telefone</label>
                 </div>
 
