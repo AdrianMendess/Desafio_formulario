@@ -38,6 +38,8 @@ if (validaCPF($cpf)) {
     echo 'CPF inválido';
 }
 
+
+
 // Validação de Email
 
 $email = $_POST['email'];
@@ -45,13 +47,35 @@ $email = $_POST['email'];
 function validaEmail($email)
 {
     if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-       return true;
+        return true;
     } else {
         return false;
     }
 }
- if (validaEmail($email)) {
+if (validaEmail($email)) {
     echo "Email valido";
- } else {
+} else {
     echo "Email invalido";
- }
+}
+
+
+
+// Validação de telefone
+
+$telefone = $_POST['telefone'];
+
+function validaTelefone($telefone)
+{
+    $telefone = preg_replace('/[^0-9]/is', '', $telefone);
+
+    if (strlen($telefone) != 11) {
+        return false;
+    }
+    return true;
+}
+
+if (validaTelefone($telefone)) {
+    echo 'telefone valido';
+} else {
+    echo 'telefone invalido';
+}
