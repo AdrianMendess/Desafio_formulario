@@ -34,8 +34,10 @@ function validaCPF($cpf)
 
 if (validaCPF($cpf)) {
     echo 'CPF válido';
+    echo '<br>';
 } else {
     echo 'CPF inválido';
+    echo '<br>';
 }
 
 
@@ -52,12 +54,14 @@ function validaEmail($email)
         return false;
     }
 }
-if (validaEmail($email)) {
-    echo "Email valido";
-} else {
-    echo "Email invalido";
-}
 
+if (validaEmail($email)) {
+    echo("Email valido");
+    echo '<br>';
+} else {
+    echo("Email inválido");
+    echo '<br>';
+}
 
 
 // Validação de telefone
@@ -75,7 +79,29 @@ function validaTelefone($telefone)
 }
 
 if (validaTelefone($telefone)) {
-    echo 'telefone valido';
+    echo('Telefone válido');
+    echo '<br>';
 } else {
-    echo 'telefone invalido';
+    echo("Telefone inválido");
+    echo '<br>';;
+}
+
+
+// Validação de municipios
+
+$cidade = $_POST['municipio'];
+$municipios = ['saoLuis', 'raposa', 'lumiar', 'ribamar'];
+function validaCidade($cidade, $municipios){
+    if(in_array($cidade, $municipios)){
+        return true;
+    }
+    return false;
+}
+
+if(validaCidade($cidade, $municipios)){
+echo("Cidade válida");
+echo '<br>';
+} else {
+    echo("Cidade inválida");
+    echo '<br>';;
 }
