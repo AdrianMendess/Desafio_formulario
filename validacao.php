@@ -87,10 +87,12 @@ if (validaTelefone($telefone)) {
 }
 
 
+
 // Validação de municipios
 
 $cidade = $_POST['municipio'];
 $municipios = ['saoLuis', 'raposa', 'lumiar', 'ribamar'];
+
 function validaCidade($cidade, $municipios){
     if(in_array($cidade, $municipios)){
         return true;
