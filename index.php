@@ -1,4 +1,12 @@
-<?php ?>
+<?php
+session_start();
+if(isset($_SESSION['erros'])){
+    foreach ($_SESSION['erros'] as $erro){
+        echo "<p>$erro</p>";
+    }
+    unset($_SESSION['erros']); // limpa após mostrar os erros
+}
+ ?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -49,10 +57,10 @@
 
                 <div class="selectBox">
                     <select name="municipio" id="municipio">
-                        <option value="saoLuis">São Luís</option>
-                        <option value="raposa">Raposa</option>
-                        <option value="lumiar">Paço do Lumiar</option>
-                        <option value="ribamar">São José de Ribamar</option>
+                        <option value="São Luís">São Luís</option>
+                        <option value="Raposa">Raposa</option>
+                        <option value="Paço do Lumiar">Paço do Lumiar</option>
+                        <option value="São José de Ribamar">São José de Ribamar</option>
                     </select>
                     <label for="municipio" class="labelInput">Município</label>
                 </div>
