@@ -123,10 +123,8 @@ if ($resultNome['valido'] && $resultCpf['valido'] && $resultEmail['valido'] && $
         ':municipio' => $resultCidade['valor'],
         ':telefone' => $resultTelefone['valor']
     ]);
-
+    echo "sucesso!";
 } else {
-
-    // Erros
     $erros = [];
 
     if (!$resultNome['valido']) {
@@ -145,7 +143,7 @@ if ($resultNome['valido'] && $resultCpf['valido'] && $resultEmail['valido'] && $
         $erros[] = "Telefone inválido - Deve conter 11 digitos.";
     }
 
-    $_SESSION['erros'] = $erros;
+    $_SESSION['erros'] = $erros; // armazena as mensagens do que der erro e poderá ser usado no index.
     header('location: index.php');
     exit();
 }
